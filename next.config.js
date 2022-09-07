@@ -5,6 +5,10 @@ const nextConfig = {
   images: {
     domains: ["openweathermap.org"],
   },
+  i18n: {
+    locales: ["en"],
+    defaultLocale: "en",
+  },
 };
 
 module.exports = nextConfig;
