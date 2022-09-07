@@ -1,0 +1,24 @@
+h1,
+h2,
+h3 {
+  line-height: 1;
+}
+
+h2,
+h3 {
+  font-weight: var(--fw-700);
+}
+
+.main-heading {
+  font-size: var(--fs-800);
+  font-weight: var(--fw-300);
+}
+
+.sub-heading {
+  font-size: var(--fs-600);
+}
+
+.section-title {
+  font-size: var(--fs-600);
+}
+

@@ -1,0 +1,132 @@
+@use './global';
+
+// Input
+
+.search-weather {
+    --max-width: 50rem;
+    background-color: transparent;
+    color: var(--fg, var(--clr-primary));
+    padding-top: var(--padding, 2rem);
+    padding-bottom: var(--padding, 2rem);
+    position: relative;
+
+    @media (min-width: 50em) {
+      --padding: 4rem;
+    }
+}
+
+.city-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    width: 100%;
+
+    @media(min-width: 25em) {
+        flex-direction: row;
+    }
+}
+
+::placeholder {
+    color: var(--clr-grey-600);
+    font-weight: var(--fw-600);
+    letter-spacing: .5px;
+}
+
+.city-form input {
+    padding: .5rem 1rem;
+    border-radius: var(--border-radius);
+    border: none;   
+}
+
+.weather-bg {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-image: url("/sunny-weather.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.weather-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--clr-base);
+    opacity: 0.8;
+}
+
+.current-weather .temperature {
+    font-size: var(--fs-700);
+    font-weight: var(--fw-700);
+}
+
+.current-weather .date {
+    color: var(--clr-accent);
+    font-weight: var(--fw-600);
+    letter-spacing: 1px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(7.375rem, 1fr));
+    gap: 2em;
+    max-width: 35.625rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info-grid .info-card {
+    color: var(--clr-primary);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    background-color: var(--clr-card);
+}
+
+.info-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-card > * + * {
+    margin-top: .5rem;
+}
+
+.info-card .title {
+    color: var(--clr-accent);
+    font-weight: var(--fw-600);
+}
+
+.info-card .description {
+    font-weight: var(--fw-700);
+}
+
+.forecast-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    gap: 2em;
+}
+
+.forecast-card {
+    color: var(--clr-primary);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    background-color: var(--clr-card);
+}
+
+.forecast-card .time,
+.forecast-card .temp {
+    font-weight: var(--fw-700);
+}
+
+.forecast-card .weather {
+    font-weight: var(--fw-600);
+}
+

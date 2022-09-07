@@ -1,0 +1,17 @@
+.hero-header {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 0;
+    color: var(--clr-accent);
+    min-height: var(--header-height);
+}
+
+.primary-header {
+    padding: 2rem 0;
+    color: var(--clr-accent);
+    min-height: var(--header-height);
+}

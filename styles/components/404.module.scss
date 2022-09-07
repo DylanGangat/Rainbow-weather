@@ -1,0 +1,12 @@
+.error-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 89px);
+    text-align: center;   
+}
+
+.error-page .title {
+    font-size: var(--fs-600);
+    font-weight:var(--fw-600)
+}
